@@ -1,0 +1,24 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 30 Jul 2024 21:53:40 at https://dailyhousie.com/ticket100010.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qYC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" -Y https://dailyhousie.com/ticket100010.html -O1 "C:\users\Jay\Subh" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+21:54:24	Error: 	"Not Found" (404) at link https://starttambola.com/publish/themeStore/db/1000/img (from https://dailyhousie.com/ticket100010.html)
+21:54:25	Warning: 	Retry after error -5 (error:00000001:lib(0):func(0):reason(1)) at link https://pngimg.com/uploads/share/small/share_PNG20.png (from https://dailyhousie.com/ticket100010.html)
+21:54:30	Warning: 	Found for https://dailyhousie.com/
+21:54:30	Warning: 	File has moved from https://dailyhousie.com/ to ticket100010.html
+21:54:30	Error: 	"Not Found" (404) at link https://starttambola.com/ticketImg/-src-.png (from https://dailyhousie.com/ticket100010.html)
+21:54:33	Warning: 	Retry after error -5 (error:00000001:lib(0):func(0):reason(1)) at link https://pngimg.com/uploads/share/small/share_PNG20.png (from https://dailyhousie.com/ticket100010.html)
+21:54:45	Error: 	"Not Found" (404) at link https://dailyhousie.com/Ui/userUi/php/checkLegitimacy.php (from https://dailyhousie.com/Ui/userUi/php/getAnnouncementTxt.php)
+21:54:45	Error: 	"error:00000001:lib(0):func(0):reason(1)" (-5) after 2 retries at link https://pngimg.com/uploads/share/small/share_PNG20.png (from https://dailyhousie.com/ticket100010.html)
+21:54:45	Warning: 	Retry after error -4 (No data (connection closed)) at link https://dailyhousie.com/Ui/adminUi/php/searchAgent.php (from https://dailyhousie.com/Ui/adminUi/js/home.js?v=90)
+21:54:45	Warning: 	Retry after error -4 (No data (connection closed)) at link https://dailyhousie.com/Ui/adminUi/php/shuffleTicket.php (from https://dailyhousie.com/Ui/adminUi/js/home.js?v=90)
+21:54:45	Warning: 	Retry after error -4 (No data (connection closed)) at link https://dailyhousie.com/Ui/adminUi/php/getFirstSixTicket.php (from https://dailyhousie.com/Ui/adminUi/js/home.js?v=90)
+21:54:46	Error: 	"Not Found" (404) at link https://dailyhousie.com/Ui/adminUi/recorded.wav (from https://dailyhousie.com/Ui/adminUi/js/audioAnnouncement.js)
+21:54:46	Error: 	"Not Found" (404) at link https://dailyhousie.com/Ui/agentUi/php/saveJsonFile.php (from https://dailyhousie.com/Ui/agentUi/js/home.js?v=53)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 6 seconds : 121 links scanned, 105 files written (4228305 bytes overall) [3123776 bytes received at 47329 bytes/sec], 1547988 bytes transferred using HTTP compression in 88 files, ratio 22%, 4.3 requests per connection
+(6 errors, 7 warnings, 0 messages)

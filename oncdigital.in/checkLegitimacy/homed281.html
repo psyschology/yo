@@ -1,0 +1,153 @@
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<div class="mainDiv" id="mainDiv">
+
+    
+
+</div>
+
+
+<script>
+
+var mainDiv;
+
+    window.onload=function(){
+mainDiv=document.getElementById("mainDiv");
+
+checkLegit();
+
+    }
+
+function checkLegit(){
+    $.get('checkReg.html',
+    {"domain":getUlrParm()},
+    function(data){
+        console.log(data);
+
+        if(data=="yess"){
+mainDiv.innerHTML='<img class="cerImg" src="cer.png"/>'+
+'<div class="infoDiv">'+
+    'This website '+getUlrParm()+' is  certified by ONCdigital. which mean we can say for sure its technically legit website and activities like winner fixing are not done.ONCdigital certified website are always technically legit and work on pure chance. You can check our computer code how it work by clicking <a href="gameCode.php">here</a>. The system work by command rand(1,90) which mean server will choose random number between 1-90. Because its completely random event our developer doesnt have any idea which number will call next and who will be the winners. You can always contact our developer by clicking <a href="https://wa.me?+918730947885">whatsapp now</a> for any further information or clearing your additional doubt.'+
+    '<br><input class="inp" id="inp" placeholder="e.g xtambola.com" onkeyup="filter(this.id)"/><button class="subBtn" onclick="check()" id="subBtn">check</button>. However we don"t involve in the business side of it. That"s why play only if you know the organizer personally.</div>';
+       }else{
+            mainDiv.innerHTML='<img class="cerImg" src="notCer.png"/>'+
+'<div class="infoDiv">'+
+    'This websiten '+getUlrParm()+' is not certified by ONCdigital. which mean we can not say for sure its technically legit website or winner fixing are not done. ONCdigital certified website are always legit and work on pure chance. You can check our computer code how it work by clicking <a href="gameCode.php">here</a>. The system work by command code rand(1,90) which mean server will choose random number between 1-90. Because its completely random event our developer doesnt have any idea which number will call next and who will be the winners. You can always contact our developer by clicking <a href="https://wa.me?+918730947885">whatsapp now</a> for any further information or clearing your additional doubt.'+
+'<br><input class="inp" id="inp" placeholder="e.g xtambola.com" onkeyup="filter(this.id)"/><button class="subBtn" onclick="check()" id="subBtn">check</button>.</div>';
+        }
+    });
+}
+
+function filter(id){
+    var inp=document.getElementById(id);
+   // inp.style.border="0px solid red";
+    inp.value=inp.value.replace(",","");
+    inp.value=inp.value.replace("'","");
+    inp.value=inp.value.replace('"',"");
+    inp.value=inp.value.replace("\\","");
+    inp.value=inp.value.replace("<","");
+    inp.value=inp.value.replace(">","");
+    inp.value=inp.value.replace("https://oncdigital.in/","");
+    inp.value=inp.value.replace(":","");
+}
+
+function check(){
+    
+    var inpVal=document.getElementById("inp").value.toLowerCase();
+    
+    if(inpVal.includes(".")){
+        var extention=inpVal.split(".")[1];
+        if(extention.length>0){
+        var extention=inpVal.split(".");
+        
+        window.location="home59bb.html?domain="+inpVal;
+    }else{
+        alert("Please provide valid domain name");
+    }
+    }else{
+        alert("Please provide valid domain name");
+    }
+}
+
+    function getUlrParm(){
+    const queryString = window.location.search;
+
+const urlParams = new URLSearchParams(queryString);
+
+const value= urlParams.get('domain');
+
+console.log(value);
+return value; 
+    }
+</script>
+
+<style>
+    body{
+        background: gray;
+    }
+    .mainDiv{
+        width: 50%;
+        margin-top: 10px;
+        background: white;
+        border:5px solid green;
+        border-radius:10px ;
+        margin-left: 25%;
+    }
+    .cerImg{
+        width: 50%;
+        margin-left: 25%;
+    }
+    .infoDiv{
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px;
+        text-align: center;
+    }
+.inp{
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+.subBtn{
+    font-size: 15px;
+    padding: 5px;
+    outline: none;
+}
+    
+    
+    @media only screen and (max-width: 1000px) {
+
+        .mainDiv{
+        width: 90%;
+        margin-top: 10px;
+        background: white;
+        border:10px solid green;
+        border-radius:20px ;
+        margin-left: 5%;
+    }
+    .cerImg{
+        width: 50%;
+        margin-left: 25%;
+    }
+    .infoDiv{
+        font-size: 40px;
+        font-weight: bold;
+        padding: 20px;
+        text-align: center;
+    }
+    .inp{
+    font-size: 35px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+.subBtn{
+    font-size: 35px;
+    padding: 10px;
+    outline: none;
+}
+    }
+</style>
